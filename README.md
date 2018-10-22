@@ -1,8 +1,8 @@
-
+SHOWCASE de microservicio en node, como referencia para entrevistas.
 
 # Qué es
 
-Microservicio para crear maquetado de emails válidos, usando la librería **mjml** y componentes de **React**, que se renderizan server side.
+Es un servicio para crear maquetado de emails válidos, usando la librería **mjml** y componentes de **React**, que se renderizan server side.
 
 El proyecto corre en node con el framework **koa**.
 
