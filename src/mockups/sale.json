@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 222,
+    "date": "2018-09-25T17:39:02-03:00",
+    "currency": "ARS",
+    "amount": 200,
+    "account": {
+      "id": 9,
+      "image": "https://geopagos.s3.amazonaws.com/accounts/1/1001/images/small/store_364e20904bacbcd736003e5e701763c2.jpg",
+      "name": "Subsidiary Name",
+      "legalName": "Business Name",
+      "address": "Busines Location 1234",
+      "identification": {
+        "type": "CUIT",
+        "number": "201234567891"
+      },
+      "phone": "+5111111111111"
+    },
+    "order": {
+      "items": [
+        {
+          "id": 2,
+          "name": "Laptop Lenovo IdeaPad 320,15.4inch Intel Core i7 7th Gen 12GB Ram,250 ssd, spanish Keyboard",
+          "unitPrice": 100,
+          "quantity": 2,
+          "tax": {
+            "name": "IVA",
+            "rate": 0.21,
+            "amount": 42
+          },
+          "image": "https://ci3.googleusercontent.com/proxy/x1BM_B4KnkDiA4zkxIiYvV0yUwxqoh5hqAqODzVsXp5uhC5l937Sml8Fl5BsVFO2jXI2p1FPP8nvUQGDN3JnytJcgo8xj8lhRTZtwtI0Iqem90dqbGsGXwvUq7wb7vFtZAClu2N4aGAe9LsofXA6MbMfYGXAFBUyHJdqCksRA=s0DE1Ft#https://geopagos.s3.amazonaws.com/accounts/0/1/images/thumbnail/product10fd13a9b250f37a75316f8490176512.jpg"
+        }
+      ]
+    },
+    "extraItems": [
+      {
+        "type": "discount",
+        "name": "10% jueves de naranja",
+        "amount": 20
+      },
+      {
+        "type": "tax",
+        "name": "IVA",
+        "amount": 37.8
+      },
+      {
+        "type": "tip",
+        "amount": 12.20
+      }
+    ],
+    "payment": {
+      "qps": true,
+      "merchantCode": "560000000014",
+      "method": "CARD",
+      "card": {
+        "cardholder": "Nombre Como Aparece en la Tarjeta",
+        "brand": "Visa",
+        "number": "1234********1234"
+      },
+      "authorizationCode": "12345678",
+      "extraInfo": {
+        "aid": "",
+        "retrieveReferenceNumber": "12345698",
+        "ticketNumber": "123",
+        "inputMode": "PR T@5",
+        "batchNumber": "0003"
+      },
+      "installments": 12,
+      "payer": {
+        "name": "",
+        "address": "",
+        "identification": {
+          "type": "CUIT",
+          "number": "201234567891"
+        }
+      },
+      "dcc": {
+        "amount": "38.66000000000000",
+        "exchangeRate": 0.37,
+        "exchangeFee": 4,
+        "currency": "MXN"
+      },
+      "terminalId": "12347857296",
+      "signatureUrl": "http://politicalmemorabilia.com/wp-content/uploads/2014/10/Calvin-Coolidge.png"
+    },
+    "location": {
+      "lat": -34.552194,
+      "lng": -58.451285
+    }
+  },
+  "meta": {
+    "feedback": {
+      "likeLink": "https://backend.algo.geopagos.com/feedback/?feedbackGood=1&id=104&token=ftA70a643828357056a461e32bc380d2e92cefef352e597265491970ac601f0b18",
+      "dislikeLink": "https://backend.algo.geopagos.com/feedback/?feedbackGood=0&id=104&token=ftA70a643828357056a461e32bc380d2e92cefef352e597265491970ac601f0b18"
+    }
+  }
+}

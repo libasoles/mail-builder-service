@@ -1,0 +1,36 @@
+vouchers:
+  type:
+    sale:
+      title: Recibo de compra dd
+    refund:
+      title: Recibo
+      badge: Devolución
+  account:
+    legalName: Razón Social
+  order:
+    defaultItemName: Importe
+    refundItemName: Devolución
+    items:
+      subTotal: SubTotal
+  payment:
+    installments: Cuotas
+    authorization: Autorización
+    reference: Referencia
+    ticket: Ticket
+    terminalID: Terminal ID
+    card:
+      cardholder: Titular
+      disclaimer: Acepto pagar este monto sujeto a los terminos del contrato celebrado
+        con el emisor de la tarjeta.
+    signature: Firma
+    QPSnoSignature: Pago Rápido - Autorizado sin firma
+    total: Total
+    qps: Pago Rápido - Autorizado sin firma
+    installmentSale: Venta en Cuotas
+    sale: Venta
+    refund: Devolución
+  feedback:
+    howWasIt: ¿Cómo fue tu experiencia?
+  doNotReply: Por favor no responda este mensaje, el mismo ha sido enviado automáticamente
+    y no recibirá respuesta. Si tiene alguna consulta puede contactarnos al {{phone}}
+    o en nuestro sitio web
