@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text } from '../../../../../components/index';
+import { Text } from 'components/index';
 
 const Title = ({ children }) => (
   <Text h2 dark center>

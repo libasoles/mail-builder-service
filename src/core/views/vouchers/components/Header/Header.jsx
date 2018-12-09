@@ -5,10 +5,10 @@ import {
   Container,
   TextColumn,
   SpacerColumn,
-} from '../../../../components/index';
+} from 'components/index';
 
+import { withAppContext } from 'services/context';
 import Image from './Image';
-import { withAppContext } from '../../../../services/context';
 import AccountDetails from './AccountDetails';
 
 const Header = (props) => {

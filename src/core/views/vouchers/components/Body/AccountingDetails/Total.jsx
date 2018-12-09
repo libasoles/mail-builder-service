@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { semanticProps } from '../../../../../components/Text';
 import Row from './Row';
-import { withAppContext } from '../../../../../services/context';
+import { withAppContext } from 'services/context';
 
-const Total = ({ formattedAmount, t }) => {
+const Total = ({ formattedAmount, styles, t }) => {
   const textProperties = {
-    ...semanticProps.huge,
-    ...semanticProps.primary,
-    ...semanticProps.bold,
+    ...styles.text.huge,
+    ...styles.text.primary,
+    ...styles.text.bold,
   };
 
   return (
@@ -22,6 +21,7 @@ const Total = ({ formattedAmount, t }) => {
 
 Total.propTypes = {
   formattedAmount: PropTypes.string.isRequired,
+  styles: PropTypes.shape({}).isRequired,
   t: PropTypes.func.isRequired,
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Column, Group, TextColumn, SpacerColumn,
-} from '../../../../components/index';
+} from 'components/index';
 
 const ExchangeDetail = (props) => {
   const { data } = props;

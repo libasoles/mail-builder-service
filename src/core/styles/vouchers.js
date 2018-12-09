@@ -66,9 +66,19 @@ export default {
   sections,
   dateTime: {
     container: {
+      height: 32,
+      width: '100%',
+      border: '1px solid #dedede',
+      verticalAlign: 'middle',
+    },
+    leftContainer: {
+      borderRadius: '50px 0 0 50px',
+      borderRight: 0,
+    },
+    rightContainer: {
+      borderRadius: '0 50px 50px 0',
     },
     text: {
-      textAlign: 'center !important',
       color: basic.textColors.light,
       padding: 6,
     },

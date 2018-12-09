@@ -1,16 +1,13 @@
 {
-  "name": "naranja-mailing",
+  "name": "mail-builder",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon -e js,jsx,json,yml --exec 'node -r dotenv/config node_modules/.bin/babel-node' src/dev.jsx",
     "server": "babel-node src/server.js",
     "server:watch": "nodemon --exec 'node -r dotenv/config node_modules/.bin/babel-node' src/server.js",
-    "build": "webpack --mode production",
-    "test": "jest src",
-    "test:watch": "jest src --watch",
-    "livereload": "livereload src -ee 'jsx' -w 3000"
+    "build": "webpack --mode production"
   },
   "dependencies": {
+    "@geopagos/mailer-core": "1.1.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^7.1.5",
@@ -18,13 +15,16 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "dotenv": "^6.1.0",
+    "full-icu": "^1.2.1",
     "i18next": "^11.9.0",
+    "intl": "^1.2.5",
     "js-yaml": "^3.12.0",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-livereload": "^0.2.0",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.11",
+    "lodash.has": "^4.5.2",
     "mjml": "^4.1.0",
     "mjml-react": "^1.0.19",
     "moment": "^2.22.2",

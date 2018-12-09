@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Column, Separator } from 'components';
+import { CurrencyFormatterFactory } from 'services';
+import { withAppContext } from 'services/context';
 import Items from './Items';
-import { Column, Separator } from '../../../../../components';
 import Subtotal from './Subtotal';
 import Total from './Total';
-import { CurrencyFormatterFactory } from '../../../../../services';
-import { withAppContext } from '../../../../../services/context';
+import ExtraItems from './ExtraItems';
 
 class AccountingDetails extends React.Component {
   constructor(props) {
@@ -31,16 +32,9 @@ class AccountingDetails extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
-
-    const {
-      amount,
-      order,
-    } = data;
-
-    let {
-      items,
-    } = order;
+    const { data, order } = this.props;
+    const { amount, extraItems } = data;
+    let { items } = order;
 
     items = this.mapItems(items);
 
@@ -57,6 +51,10 @@ class AccountingDetails extends React.Component {
 
         <Separator />
 
+        <ExtraItems items={extraItems} />
+
+        <Separator />
+
         <Total formattedAmount={this.currencyFormatter.format(amount)} />
       </Column>
     );
@@ -65,6 +63,7 @@ class AccountingDetails extends React.Component {
 
 AccountingDetails.propTypes = {
   data: PropTypes.shape({}).isRequired,
+  order: PropTypes.shape({}).isRequired,
   config: PropTypes.shape({}).isRequired,
   t: PropTypes.func.isRequired,
 };

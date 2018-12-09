@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, Spacer, Column } from '../../../../../components';
-import DateTime from '../../../../components/DateTime';
+import { Text, Spacer, Column } from 'components';
+import DateTime from 'views/components/DateTime';
+import { withAppContext } from 'services/context';
 import Title from './Title';
-import { withAppContext } from '../../../../../services/context';
 
 const Heading = ({
   data, title, t,
@@ -17,25 +17,25 @@ const Heading = ({
     authorizationCode,
   } = payment;
 
-  const DateTimeWithAppContext = withAppContext(DateTime);
-
   return (
-    <Column>
+    <React.Fragment>
+      <Column>
 
-      <Title>
-        {title}
-      </Title>
+        <Title>
+          {title}
+        </Title>
 
-      <Spacer height={5} />
+        <Spacer height={5} />
 
-      <Text h3 center>
-        {`${t('vouchers:payment.authorization')} ${authorizationCode}`}
-      </Text>
+        <Text h3 center>
+          {`${t('vouchers:payment.authorization')} ${authorizationCode}`}
+        </Text>
 
-      <Spacer height={20} />
+        <Spacer height={20} />
 
-      <DateTimeWithAppContext value={date} center />
-    </Column>
+        <DateTime value={date} center />
+      </Column>
+    </React.Fragment>
   );
 };
 

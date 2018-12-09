@@ -6,14 +6,14 @@ import {
   TextColumn,
   SeparatorColumn,
   SpacerColumn,
-} from '../../../../components/index';
+} from 'components/index';
 import PaymentDetails from './PaymentDetails/PaymentDetails';
 import AccountingDetails from './AccountingDetails/index';
 import SignatureBlock from './SignatureBlock/index';
 import Heading from './Heading/Heading';
 import {
   withAppContext,
-} from '../../../../services/context';
+} from 'services/context';
 
 const Body = (props) => {
   const {
@@ -22,11 +22,11 @@ const Body = (props) => {
 
   const {
     payment,
+    order
   } = data;
 
   const {
     card = {}, installments,
-    extraInfo = {},
   } = payment;
 
   const voucherType = installments > 1 ? t('vouchers:payment.installmentSale') : t('vouchers:payment.sale');
@@ -37,7 +37,7 @@ const Body = (props) => {
 
       <SpacerColumn height={24} />
 
-      <AccountingDetails />
+      <AccountingDetails order={order} />
 
       <SeparatorColumn />
 
@@ -47,7 +47,7 @@ const Body = (props) => {
 
       <SpacerColumn height={8} />
 
-      <PaymentDetails PaymentData={{ ...payment, ticketNumber: extraInfo.ticketNumber }} />
+      <PaymentDetails payment={payment} />
 
       <SpacerColumn height={24} />
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table, Column } from '../../../../components/index';
-import { withAppContext } from '../../../../services/context';
+import { Table, Column } from 'components/index';
+import { withAppContext } from 'services/context';
 
 const AccountImage = (props) => {
   const { src, styles } = props;

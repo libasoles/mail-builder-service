@@ -5,8 +5,8 @@ import {
   MjmlColumn,
   MjmlImage,
 } from 'mjml-react';
-import Group from '../../../../components/Group';
-import { withAppContext } from '../../../../services/context';
+import Group from 'components/Group';
+import { withAppContext } from 'services/context';
 
 const FeedbackSelector = ({ styles }) => (
   <Group>

@@ -1,4 +1,4 @@
-import defaultStyles from '../styles/index';
+import defaultStyles from 'styles/index';
 import Theme from './theme';
 
 export default class ThemeFactory {

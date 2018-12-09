@@ -10,7 +10,7 @@ import {
   MjmlText,
   MjmlWrapper,
 } from 'mjml-react';
-import { withAppContext } from '../services/context';
+import { withAppContext } from 'services/context';
 
 const Template = (props) => {
   const { children, styles } = props;

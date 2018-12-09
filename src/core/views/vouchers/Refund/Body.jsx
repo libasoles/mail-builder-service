@@ -6,13 +6,13 @@ import {
   TextColumn,
   SeparatorColumn,
   SpacerColumn,
-} from '../../../components/index';
-import { Badge } from '../../components/index';
+} from 'components/index';
+import { Badge } from 'views/components/index';
 import {
   Heading, PaymentDetails, SignatureBlock,
-} from '../components/Body';
+} from 'views/vouchers/components/Body';
+import { withAppContext } from 'services/context';
 import AccountingDetails from './AccountingDetails';
-import { withAppContext } from '../../../services/context';
 
 
 const Body = (props) => {
@@ -51,7 +51,7 @@ const Body = (props) => {
 
       <SpacerColumn height={8} />
 
-      <PaymentDetails PaymentData={{ ...payment, ticketNumber: extraInfo.ticketNumber }} />
+      <PaymentDetails payment={payment} />
 
       <SpacerColumn height={24} />
 

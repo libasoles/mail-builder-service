@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ItemsRow from './ItemsRow';
-import { withAppContext } from '../../../../../services/context';
+import { withAppContext } from 'services/context';
 
 const Items = (props) => {
   const { items } = props;

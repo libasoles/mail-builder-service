@@ -1,4 +1,4 @@
-import defaultConfig from '../config/index';
+import defaultConfig from 'config/index';
 import Config from './config';
 
 export default class ConfigFactory {

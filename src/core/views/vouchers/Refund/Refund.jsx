@@ -2,16 +2,16 @@ import React from 'react';
 
 import {
   Template,
-} from '../../../components/index';
+} from 'components/index';
 
 import {
   Header,
   Map,
   Footer,
-} from '../components/index';
+} from 'views/vouchers/components/index';
 
 import Body from './Body';
-import { withAppContext } from '../../../services/context';
+import { withAppContext } from 'services/context';
 
 class Voucher extends React.PureComponent {
   render() {

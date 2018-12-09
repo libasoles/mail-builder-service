@@ -29,7 +29,7 @@ AppContextProvider.propTypes = {
   data: PropTypes.shape({}).isRequired,
 };
 
-function withAppContext(Component) {
+const withAppContext = (Component) => {
   return function WrappedComponent(props) {
     return (
       <StylesContext.Consumer>

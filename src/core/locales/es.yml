@@ -7,6 +7,9 @@ vouchers:
       badge: Devolución
   account:
     legalName: Razón Social
+    address: Ubicación
+    phone: Teléfono
+    merchantId: Código de Comercio
   order:
     defaultItemName: Importe
     refundItemName: Devolución
@@ -27,10 +30,22 @@ vouchers:
     total: Total
     qps: Pago Rápido - Autorizado sin firma
     installmentSale: Venta en Cuotas
+    aid: AID
+    arqc: ARQC
+    arpc: ARPC
+    tc: TC
+    tsi: TSI
+    tvr: TVR
     sale: Venta
     refund: Devolución
+    extraItems:
+      tip: Propina
+      tax: Impuesto
+      serviceCharge: Otros cargos
+      discount: Descuento
   feedback:
     howWasIt: ¿Cómo fue tu experiencia?
   doNotReply: Por favor no responda este mensaje, el mismo ha sido enviado automáticamente
     y no recibirá respuesta. Si tiene alguna consulta puede contactarnos al {{phone}}
     o en nuestro sitio web
+  subject: Recibo de compra - {{accountName}}

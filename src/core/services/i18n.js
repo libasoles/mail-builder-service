@@ -1,6 +1,6 @@
 import i18n from 'i18next';
-import defaultLocales from '../locales';
-import deepMerge from '../helpers/deepMerge';
+import defaultLocales from 'locales';
+import deepMerge from 'helpers/deepMerge';
 
 const i18NextInitializer = (appLocales, namespaces, fallbackLng = 'es') => {
   i18n
@@ -9,7 +9,7 @@ const i18NextInitializer = (appLocales, namespaces, fallbackLng = 'es') => {
       fallbackLng,
       ns: namespaces,
     }, (err, t) => {
-      if (err) return console.log('something went wrong loading', err);
+      if (err) console.error('something went wrong loading', err);
       t('key');
     });
 };

@@ -1,4 +1,9 @@
 import CurrencyFormatter from './currencyFormatter';
+import { supportLocales } from './intl';
+
+beforeAll(() => {
+  supportLocales(['es-AR']);
+});
 
 it('formats price with correct currency symbol', () => {
   const formatter = new CurrencyFormatter('es-AR', 'ARS');

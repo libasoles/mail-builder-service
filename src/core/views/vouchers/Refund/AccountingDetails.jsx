@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Column, Separator } from '../../../components';
-import { Items, Total } from '../components/Body/AccountingDetails';
-import CurrencyFormatterFactory from '../../../services/currencyFormatter.factory';
+import { Column, Separator } from 'components';
+import { Items, Total } from 'views/vouchers/components/Body/AccountingDetails';
+import CurrencyFormatterFactory from 'services/currencyFormatter.factory';
 import {
   withAppContext,
-} from '../../../services/context';
+} from 'services/context';
 
 class AccountingDetails extends React.Component {
   constructor(props) {
@@ -15,18 +15,15 @@ class AccountingDetails extends React.Component {
     this.currencyFormatter = CurrencyFormatterFactory.create(config.locale, currency);
   }
 
-  mapItems(items) {
-    return items.map((item) => {
-      const { t } = this.props;
-      const name = item.name || t('vouchers:order.refundItemName');
-      const price = -item.unitPrice;
-      const formattedPrice = this.currencyFormatter.format(price);
-      return {
-        name,
-        price,
-        formattedPrice,
-      };
-    });
+  createRefundRow(amount) {
+    const { t } = this.props;
+    const price = -amount;
+    const formattedPrice = this.currencyFormatter.format(price);
+    return [{
+      name: t('vouchers:order.refundItemName'),
+      price,
+      formattedPrice,
+    }];
   }
 
   render() {
@@ -34,14 +31,9 @@ class AccountingDetails extends React.Component {
 
     const {
       amount,
-      order,
     } = data;
 
-    let {
-      items,
-    } = order;
-
-    items = this.mapItems(items);
+    const items = this.createRefundRow(amount);
 
     return (
       <Column>

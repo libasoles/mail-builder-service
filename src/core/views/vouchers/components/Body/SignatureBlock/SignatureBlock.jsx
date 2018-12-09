@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Text, Spacer, Column } from 'components';
+import { withAppContext } from 'services/context';
 import Signature from './Signature';
-import { Text, Spacer, Column } from '../../../../../components';
-import { withAppContext } from '../../../../../services/context';
 
 const SignatureBlock = ({ paymentData, t }) => {
   const {
@@ -10,18 +10,18 @@ const SignatureBlock = ({ paymentData, t }) => {
   } = paymentData;
   return (
     <Column>
-      { signatureUrl && (
-      <React.Fragment>
-        <Signature src={signatureUrl} />
-        <Spacer height={30} />
-      </React.Fragment>
-      )}
+      <If condition={signatureUrl}>
+        <React.Fragment>
+          <Signature src={signatureUrl} />
+          <Spacer height={30} />
+        </React.Fragment>
+      </If>
 
-      { !signatureUrl && qps && (
-      <Text bold center>
-        {t('vouchers:payment.QPSnoSignature')}
-      </Text>
-      ) }
+      <If condition={!signatureUrl && qps}>
+        <Text bold center>
+          {t('vouchers:payment.QPSnoSignature')}
+        </Text>
+      </If>
     </Column>
   );
 };

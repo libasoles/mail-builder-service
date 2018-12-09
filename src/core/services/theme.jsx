@@ -1,5 +1,5 @@
-import { get } from 'lodash';
-import deepMerge from '../helpers/deepMerge';
+import get from 'lodash/get';
+import deepMerge from 'helpers/deepMerge';
 
 class ThemeService {
   constructor(styles) {

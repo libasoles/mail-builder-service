@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextColumn } from '../../../../../components/index';
-import { withAppContext } from '../../../../../services/context';
+import { TextColumn } from 'components/index';
+import { withAppContext } from 'services/context';
 
 const Authorization = ({ code, t }) => (
   <React.Fragment>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Row from './Row';
-import { withAppContext } from '../../../../../services/context';
+import { withAppContext } from 'services/context';
 
 const ItemsRow = ({ itemData, styles }) => {
   const textProperties = {

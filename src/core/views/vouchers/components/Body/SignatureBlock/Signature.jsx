@@ -4,8 +4,8 @@ import {
   Text,
   Image,
   Separator,
-} from '../../../../../components/index';
-import { withAppContext } from '../../../../../services/context';
+} from 'components/index';
+import { withAppContext } from 'services/context';
 
 const Signature = (props) => {
   const { src, t } = props;
@@ -15,7 +15,7 @@ const Signature = (props) => {
 
       <Separator padding="5px 4px" />
 
-      <Text light center>
+      <Text light bold center>
         {t('vouchers:payment.signature')}
       </Text>
     </React.Fragment>

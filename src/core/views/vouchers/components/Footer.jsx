@@ -6,8 +6,8 @@ import {
   TextColumn,
   SpacerColumn,
   ImageColumn,
-} from '../../../components/index';
-import { withAppContext } from '../../../services/context';
+} from 'components/index';
+import { withAppContext } from 'services/context';
 
 const Footer = (props) => {
   const { config, t } = props;

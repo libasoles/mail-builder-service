@@ -5,12 +5,12 @@ import {
   Body,
   Map,
   Footer,
-} from '../components/index';
+} from 'views/vouchers/components/index';
 
 import {
   Template,
-} from '../../../components/index';
-import { withAppContext } from '../../../services/context';
+} from 'components/index';
+import { withAppContext } from 'services/context';
 
 class Voucher extends React.PureComponent {
   render() {

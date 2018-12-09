@@ -6,6 +6,7 @@ export default class CurrencyFormatter {
     const settings = {
       style: 'currency',
       currency,
+      currencyDisplay: 'symbol',
       minimumFractionDigits: 2,
     };
     this.instance = new Intl.NumberFormat(locale, settings);

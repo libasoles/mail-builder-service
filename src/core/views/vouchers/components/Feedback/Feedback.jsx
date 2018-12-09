@@ -4,9 +4,9 @@ import {
   Container,
   TextColumn,
   SpacerColumn,
-} from '../../../../components/index';
+} from 'components/index';
 import FeedbackSelector from './FeedbackSelector';
-import { withAppContext } from '../../../../services/context';
+import { withAppContext } from 'services/context';
 
 const Feedback = ({ t }) => (
   <Container>
